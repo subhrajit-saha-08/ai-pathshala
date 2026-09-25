@@ -1,0 +1,17 @@
+# Python & Backend
+**/__pycache__/
+**/.pytest_cache/
+**/.kilo/
+**/venv/
+**/.env
+
+# Node & Frontend
+**/node_modules/
+**/.next/
+**/.env.local
+
+# Scratchpad & Temporary Artifacts
+**/*.zip
+**/temp_html*.html
+**/stitch_*.zip
+**/code.html
