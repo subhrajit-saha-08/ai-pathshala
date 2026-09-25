@@ -1,0 +1,136 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+
+/* Claymorphic & 3D Toybox volumetric utilities */
+.clay-card {
+  background: #ffffff;
+  border-radius: 2rem;
+  box-shadow: 
+    0 20px 40px -15px rgba(100, 95, 210, 0.12),
+    0 8px 16px -6px rgba(100, 95, 210, 0.08),
+    inset 0 -6px 8px rgba(100, 95, 210, 0.04),
+    inset 0 4px 6px rgba(255, 255, 255, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.clay-subcard {
+  background: #f8f7ff;
+  border-radius: 1.5rem;
+  box-shadow: 
+    inset 0 2px 5px rgba(30, 27, 75, 0.05),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.8),
+    0 4px 10px rgba(100, 95, 210, 0.04);
+}
+
+.clay-button-pink {
+  background: linear-gradient(180deg, #ff7a97 0%, #ff5277 100%);
+  box-shadow: 
+    0 10px 22px -4px rgba(255, 101, 132, 0.45),
+    inset 0 3px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -4px 0 rgba(199, 44, 76, 0.4);
+}
+.clay-button-pink:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 14px 26px -4px rgba(255, 101, 132, 0.55),
+    inset 0 3px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 0 rgba(199, 44, 76, 0.4);
+}
+.clay-button-pink:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 4px 10px rgba(255, 101, 132, 0.35),
+    inset 0 2px 2px rgba(0, 0, 0, 0.15),
+    inset 0 -1px 0 rgba(199, 44, 76, 0.4);
+}
+
+.clay-button-blue {
+  background: linear-gradient(180deg, #4ec4ff 0%, #29a8f2 100%);
+  box-shadow: 
+    0 8px 18px -4px rgba(56, 182, 255, 0.4),
+    inset 0 3px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -4px 0 rgba(20, 133, 196, 0.4);
+}
+
+.clay-badge-yellow {
+  background: linear-gradient(180deg, #fff078 0%, #ffde59 100%);
+  color: #634700;
+  box-shadow: 
+    0 6px 14px -3px rgba(255, 222, 89, 0.5),
+    inset 0 2px 2px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 0 rgba(204, 158, 0, 0.35);
+}
+
+.clay-badge-pink {
+  background: linear-gradient(180deg, #ffa8ba 0%, #ff6584 100%);
+  color: #ffffff;
+  box-shadow: 
+    0 6px 14px -3px rgba(255, 101, 132, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 0 rgba(179, 36, 68, 0.3);
+}
+
+.clay-badge-sky {
+  background: linear-gradient(180deg, #7ad5ff 0%, #38b6ff 100%);
+  color: #ffffff;
+  box-shadow: 
+    0 6px 14px -3px rgba(56, 182, 255, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 0 rgba(15, 125, 186, 0.3);
+}
+
+.clay-pill-active {
+  background: linear-gradient(180deg, #ff6e8d 0%, #ff5277 100%);
+  color: #ffffff;
+  box-shadow: 
+    0 8px 16px -3px rgba(255, 82, 119, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -3px 0 rgba(184, 31, 65, 0.4);
+}
+
+.clay-input {
+  background: #f4f3ff;
+  border: 2.5px solid #e2e0fb;
+  box-shadow: inset 0 3px 5px rgba(30, 27, 75, 0.05), 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+.clay-input:focus {
+  background: #ffffff;
+  border-color: #ff6584;
+  box-shadow: 
+    inset 0 2px 4px rgba(30, 27, 75, 0.04),
+    0 0 0 4px rgba(255, 101, 132, 0.18);
+}
+
+.clay-avatar {
+  background: #ffffff;
+  box-shadow: 
+    0 10px 20px -5px rgba(100, 95, 210, 0.12),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -3px 4px rgba(100, 95, 210, 0.06);
+  border: 3px solid #f0eeff;
+}
+.clay-avatar-selected {
+  background: #fff5f7;
+  border: 3.5px solid #ff6584;
+  box-shadow: 
+    0 12px 24px -4px rgba(255, 101, 132, 0.3),
+    inset 0 3px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -3px 4px rgba(255, 101, 132, 0.1);
+}
+
+@keyframes floatBubble {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+.animate-clay-float {
+  animation: floatBubble 5s ease-in-out infinite;
+}
